@@ -1,11 +1,5 @@
-const removeFromArray = function(array) {
-    for (argument of arguments) {
-        array = array.filter(function(val) {
-            return val !== argument;
-        });
-    }
-    return array;
-};
-
+const removeFromArray = function(array, ...args) {
+    return array.filter(val => !args.includes(val));
+}
 // Do not edit below this line
 module.exports = removeFromArray;
